@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generator Link Undangan - Sulis & Haykal</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary-color: #8E2B43;       /* Rose Gold / Deep Rose */
+      --primary-light: #A83B55;      /* Lighter Rose */
+      --accent-color: #D4AF37;       /* Premium Gold */
+      --accent-gold-dark: #B38F1E;   /* Dark Gold */
+      --bg-cream: #FCF8F5;           /* Soft Ivory */
+      --text-dark: #3E3436;          /* Elegant Charcoal */
+      --text-muted: #8B7355;         /* Soft Brown */
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-sm: 8px;
+      --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: radial-gradient(circle at 10% 20%, rgba(252,248,245,1) 0%, rgba(247,239,233,1) 90%);
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 580px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 20px 50px rgba(142, 43, 67, 0.12);
+      overflow: hidden;
+    }
+
+    /* Header styling matching the wedding invitation theme */
+    .header {
+      background: var(--primary-color);
+      color: #fff;
+      padding: 32px 24px;
+      text-align: center;
+      border-bottom: 3px solid var(--accent-color);
+      position: relative;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 70%);
+    }
+
+    .header-logo {
+      font-family: 'Cinzel', 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+      color: var(--accent-color);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    }
+
+    .header-subtitle {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+    }
+
+    .main-form {
+      padding: 30px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-group label i {
+      color: var(--accent-gold-dark);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(142, 43, 67, 0.2);
+      border-radius: var(--radius-md);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-dark);
+      outline: none;
+      transition: var(--transition-smooth);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+      background: #fff;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    @media (max-width: 480px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Output Link Box styling */
+    .output-box {
+      background: rgba(142, 43, 67, 0.04);
+      border: 1px dashed rgba(212, 175, 55, 0.4);
+      padding: 16px;
+      border-radius: var(--radius-md);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 5px;
+    }
+
+    .output-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .output-link {
+      font-size: 0.8rem;
+      color: var(--text-dark);
+      word-break: break-all;
+      font-weight: 600;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(142, 43, 67, 0.1);
+      border-radius: var(--radius-sm);
+    }
+
+    /* Buttons system */
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .whatsapp-btn {
+      width: 100%;
+      background: #25D366; /* WhatsApp official green */
+      color: #fff;
+      border: none;
+      padding: 16px 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);
+      transition: var(--transition-smooth);
+    }
+
+    .whatsapp-btn:hover {
+      background: #20ba59;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+    }
+
+    .secondary-btns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .action-btn {
+      background: var(--bg-cream);
+      color: var(--primary-color);
+      border: 1px solid var(--accent-color);
+      padding: 12px 15px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: var(--transition-smooth);
+    }
+
+    .action-btn:hover {
+      background: var(--primary-color);
+      color: #fff;
+      border-color: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    /* Text message preview */
+    .preview-box {
+      border: 1px solid rgba(142, 43, 67, 0.15);
+      border-radius: var(--radius-md);
+      background: #fff;
+      padding: 18px;
+      font-size: 0.8rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      max-height: 220px;
+      overflow-y: auto;
+      color: var(--text-dark);
+    }
+
+    /* Toast styling */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--primary-color);
+      color: var(--bg-cream);
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid var(--accent-color);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.3s ease-out, opacity 0.3s;
+      z-index: 1000;
+    }
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Branding footer */
+    .footer-credit {
+      text-align: center;
+      padding: 20px 24px 30px 24px;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      letter-spacing: 0.8px;
+    }
+    .footer-credit a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Branding Header -->
+    <div class="header">
+      <h1 class="header-logo">SULIS & HAYKAL</h1>
+      <p class="header-subtitle">Generator Link Undangan Digital</p>
+    </div>
+
+    <!-- Main Generator Form -->
+    <div class="main-form">
+      
+      <!-- Input Guest Name -->
+      <div class="form-group">
+        <label for="guestName"><i class="fa-regular fa-user"></i> Nama Tamu Undangan</label>
+        <input type="text" id="guestName" placeholder="Contoh: Bpk. Budi & Istri / Keluarga Besar H. Ahmad" autofocus>
+      </div>
+
+      <!-- Phone Number input (direct chat hook) -->
+      <div class="form-group">
+        <label for="guestPhone"><i class="fa-brands fa-whatsapp"></i> No. WhatsApp Tamu (Opsional)</label>
+        <input type="text" id="guestPhone" placeholder="Contoh: 081234567890 (kosongkan jika ingin memilih kontak manual)">
+      </div>
+
+      <!-- Live Generated Invitation Link -->
+      <div class="output-box">
+        <span class="output-title">Link Undangan Terbentuk:</span>
+        <div class="output-link" id="generatedLink">Membangun link...</div>
+      </div>
+
+      <!-- Message Template Customization -->
+      <div class="form-group">
+        <label for="messageTemplate"><i class="fa-regular fa-envelope"></i> Template Pesan WhatsApp</label>
+        <textarea id="messageTemplate" rows="10">Kepada Yth.
+*NamaTamu*
+
+Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami:
+
+*SULIS & HAYKAL*
+(Sulis & Nofriansyah)
+
+🗓️ Sabtu, 12 September 2026
+📍 Dusun Munawar Desa Lakatan Kec. Galang
+
+Berikut link detail undangan digital kami:
+*UrlUndangan*
+
+Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+
+Terima kasih.
+__
+*SULIS & HAYKAL*</textarea>
+      </div>
+
+      <!-- Real-time Text Message Preview -->
+      <div class="form-group">
+        <label><i class="fa-regular fa-eye"></i> Preview Pesan Kiriman</label>
+        <div class="preview-box" id="messagePreview">Pesan preview akan muncul di sini...</div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="btn-container">
+        <button class="whatsapp-btn" id="sendWhatsappBtn">
+          Kirim via WhatsApp <i class="fa-brands fa-whatsapp"></i>
+        </button>
+        
+        <div class="secondary-btns">
+          <button class="action-btn" id="copyLinkBtn">
+            Salin Link <i class="fa-regular fa-copy"></i>
+          </button>
+          <button class="action-btn" id="copyMessageBtn">
+            Salin Pesan <i class="fa-regular fa-envelope-open"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer credit -->
+    <div class="footer-credit">
+      Powered by <a href="https://instagram.com/war.digital_" target="_blank">WARDIGITAL</a>
+    </div>
+
+  </div>
+
+  <!-- Toast system -->
+  <div class="toast" id="toast">Berhasil disalin!</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      const guestNameInput = document.getElementById('guestName');
+      const guestPhoneInput = document.getElementById('guestPhone');
+      const messageTemplateInput = document.getElementById('messageTemplate');
+      const generatedLinkEl = document.getElementById('generatedLink');
+      const messagePreviewEl = document.getElementById('messagePreview');
+      
+      const sendWhatsappBtn = document.getElementById('sendWhatsappBtn');
+      const copyLinkBtn = document.getElementById('copyLinkBtn');
+      const copyMessageBtn = document.getElementById('copyMessageBtn');
+      const toastEl = document.getElementById('toast');
+
+      // 1. Resolve Invitation Base URL dynamically (Domain independency)
+      function getInvitationBaseURL() {
+        const currentLoc = window.location.href;
+        // Truncate "share.html" and trailing slashes to point to index.html on same folder
+        const pathSplit = currentLoc.substring(0, currentLoc.lastIndexOf('/'));
+        return pathSplit + '/index.html';
+      }
+
+      // 2. Generate customized URL & Message text
+      function updateGeneratedContent() {
+        const guestName = guestNameInput.value.trim();
+        const rawTemplate = messageTemplateInput.value;
+        const baseUrl = getInvitationBaseURL();
+        
+        // Compile Link
+        let finalLink = baseUrl;
+        if (guestName) {
+          finalLink += '?to=' + encodeURIComponent(guestName);
+        }
+        generatedLinkEl.textContent = finalLink;
+
+        // Compile Message Text
+        let finalMessage = rawTemplate;
+        const namePlaceholder = guestName || "[Nama Tamu]";
+        finalMessage = finalMessage.replace(/\*NamaTamu\*/g, '*' + namePlaceholder + '*');
+        finalMessage = finalMessage.replace(/\*UrlUndangan\*/g, finalLink);
+        
+        messagePreviewEl.textContent = finalMessage;
+        return { finalLink, finalMessage };
+      }
+
+      // Live updates
+      guestNameInput.addEventListener('input', updateGeneratedContent);
+      guestPhoneInput.addEventListener('input', updateGeneratedContent);
+      messageTemplateInput.addEventListener('input', updateGeneratedContent);
+      
+      // Initialize
+      updateGeneratedContent();
+
+      // 3. Send via WhatsApp triggers
+      sendWhatsappBtn.addEventListener('click', () => {
+        const data = updateGeneratedContent();
+        let phone = guestPhoneInput.value.trim().replace(/[^0-9]/g, ''); // sanitize non-numbers
+        
+        // Convert local phone 08xxx to international 628xxx format for WhatsApp API
+        if (phone.startsWith('0')) {
+          phone = '62' + phone.substring(1);
+        }
+        
+        const encodedText = encodeURIComponent(data.finalMessage);
+        
+        // Compile endpoint: standard wa.me API
+        let whatsappURL = 'https://api.whatsapp.com/send?text=' + encodedText;
+        if (phone) {
+          whatsappURL = 'https://api.whatsapp.com/send?phone=' + phone + '&text=' + encodedText;
+        }
+        
+        window.open(whatsappURL, '_blank');
+      });
+
+      // 4. Clipboard copying functions
+      function showToast(message) {
+        toastEl.textContent = message;
+        toastEl.classList.add('show');
+        setTimeout(() => {
+          toastEl.classList.remove('show');
+        }, 2000);
+      }
+
+      copyLinkBtn.addEventListener('click', () => {
+        const data = updateGeneratedContent();
+        navigator.clipboard.writeText(data.finalLink).then(() => {
+          showToast("Link undangan disalin!");
+        }).catch(err => {
+          console.error("Gagal menyalin link:", err);
+        });
+      });
+
+      copyMessageBtn.addEventListener('click', () => {
+        const data = updateGeneratedContent();
+        navigator.clipboard.writeText(data.finalMessage).then(() => {
+          showToast("Pesan ucapan disalin!");
+        }).catch(err => {
+          console.error("Gagal menyalin pesan:", err);
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>

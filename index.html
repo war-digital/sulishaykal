@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Sulis & Haykal</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Undangan Pernikahan Digital Sulis & Haykal. Temukan detail acara, galeri foto, peta lokasi, dan kirimkan ucapan doa restu Anda di sini.">
+    <meta name="keywords"
+        content="undangan digital, Sulis Haykal, pernikahan Sulis & Haykal, wedding invitation, undangan online">
+    <meta name="author" content="Antigravity">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Wedding of Sulis & Haykal">
+    <meta property="og:description" content="Kirim doa restu dan hadiri pernikahan kami secara digital.">
+    <meta property="og:image" content="./g13.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=16">
+
+    <!-- Mobile WebView Debug Catcher -->
+    <script>
+        window.onerror = function (message, source, lineno, colno, error) {
+            console.error("JS ERROR:\n" + message + "\nSource: " + source + "\nLine: " + lineno + "\nColumn: " + colno, error);
+            return true; // Suppress intrusive error dialogs
+        };
+    </script>
+</head>
+
+<body>
+
+    <!-- ================= COVER 1 (MAIN COVER) ================= -->
+    <section id="cover-one" class="cover-section active">
+        <div class="cover-overlay"></div>
+        <div class="cover-content">
+            <!-- Header Group (Top) -->
+            <div class="cover-header animate-fade-in-down">
+                <h1 class="brand-undangan">Undangan</h1>
+            </div>
+
+            <!-- Footer Group (Bottom) -->
+            <div class="cover-footer animate-fade-in-up">
+                <div class="slider-instruction animate-pulse">
+                    <span>Geser ke kanan untuk membuka</span>
+                </div>
+
+                <!-- Slide to Unlock Button -->
+                <div class="slider-container" id="slider-container">
+                    <div class="slider-bg"></div>
+                    <div class="slider-text">GESER DISINI</div>
+                    <div class="slider-handle" id="slider-handle">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= COVER 2 (GUEST COVER) ================= -->
+    <section id="cover-two" class="cover-section">
+        <!-- Soft Cross-Fade Slideshow -->
+        <div class="slideshow-container">
+            <div class="slide active" style="background-image: url('g10.jpg');"></div>
+            <div class="slide" style="background-image: url('g3.jpg');"></div>
+            <div class="slide" style="background-image: url('g14.jpg');"></div>
+        </div>
+        <div class="cover-overlay"></div>
+        <div class="cover-content justify-between py-12">
+
+            <!-- Top Text: Lontara Font -->
+            <div class="cover-header-lontara animate-fade-in-down">
+                <p class="subtitle">THE WEDDING OF</p>
+                <h2 class="bride-groom-names">SULIS & HAYKAL</h2>
+            </div>
+
+            <!-- Bottom Guest Info and Button -->
+            <div class="cover-footer animate-fade-in-up">
+                <div class="guest-card">
+                    <p class="to-text">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+                    <h3 id="guest-name" class="guest-name-text">Nama Undangan</h3>
+                    <p class="we-invite-text">Kami Mengundang Anda untuk Menghadiri Hari Bahagia Kami</p>
+                </div>
+
+                <button id="btn-open-invitation" class="btn-premium">
+                    <i class="fa-solid fa-envelope-open-text mr-2 animate-bounce-horizontal"></i> Buka Undangan
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= MAIN INVITATION CONTENT ================= -->
+    <main id="main-invitation" class="main-content hidden">
+
+        <!-- Main Background Slideshow -->
+        <div id="main-bg-slideshow">
+            <div class="main-slide active" style="background-image: url('g1.jpg');"></div>
+            <div class="main-slide" style="background-image: url('g2.jpg');"></div>
+            <div class="main-slide" style="background-image: url('g3.jpg');"></div>
+            <div class="main-slide" style="background-image: url('g4.jpg');"></div>
+            <div class="main-slide" style="background-image: url('g5.jpg');"></div>
+            <div class="main-slide" style="background-image: url('g6.jpg');"></div>
+            <div class="main-slide" style="background-image: url('g7.jpg');"></div>
+            <div class="main-slide" style="background-image: url('g8.jpg');"></div>
+            <div class="main-slide" style="background-image: url('g9.jpg');"></div>
+            <div class="main-slide" style="background-image: url('g10.jpg');"></div>
+            <div class="main-slide" style="background-image: url('g11.jpg');"></div>
+            <div class="main-slide" style="background-image: url('g12.jpg');"></div>
+            <div class="main-slide" style="background-image: url('g14.jpg');"></div>
+        </div>
+
+        <!-- Section: Hero (First Screen after Opening) -->
+        <section id="main-hero" class="hero-section">
+            <div class="hero-bg" style="background-image: url('g12.jpg');"></div>
+            <div class="cover-overlay"></div>
+            <div class="hero-content">
+                <!-- Top Header -->
+                <div class="hero-header-top">
+                    <p class="hero-invited">You are invited to the wedding of</p>
+                    <h1 class="hero-names">SULIS & HAYKAL</h1>
+                </div>
+
+                <!-- Bottom Footer -->
+                <div class="hero-footer-bottom">
+                    <p class="hero-date-label">Waktu Pernikahan:</p>
+                    <p class="hero-date-val">Sabtu, 12 September 2026</p>
+
+                    <div class="timer-grid">
+                        <div class="timer-box">
+                            <span id="days" class="time-num">00</span>
+                            <span class="time-label">Hari</span>
+                        </div>
+                        <div class="timer-box">
+                            <span id="hours" class="time-num">00</span>
+                            <span class="time-label">Jam</span>
+                        </div>
+                        <div class="timer-box">
+                            <span id="minutes" class="time-num">00</span>
+                            <span class="time-label">Menit</span>
+                        </div>
+                        <div class="timer-box">
+                            <span id="seconds" class="time-num">00</span>
+                            <span class="time-label">Detik</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Floating Music Player -->
+        <div id="music-player-container" class="music-player-btn animate-rotate-slow">
+            <div class="vinyl-disc" id="music-disc">
+                <i class="fa-solid fa-music"></i>
+            </div>
+        </div>
+
+        <!-- Section: Intro / Opening Quote -->
+        <section id="intro" class="section-padding bg-ivory">
+            <div class="container text-center">
+                <div class="flower-divider animate-on-scroll">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div class="quote-box animate-on-scroll">
+                    <h4 class="section-subtitle">Bismillahirrohmanirrohim</h4>
+                    <p class="verse-text">
+                        "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari
+                        jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di
+                        antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda
+                        (kebesaran Allah) bagi kaum yang berpikir."
+                    </p>
+                    <p class="verse-ref">QS. Ar-Rum: 21</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Running Photos Marquee -->
+        <div class="running-photos-container animate-on-scroll">
+            <div class="running-photos-track">
+                <img src="g1.jpg" alt="Running Photo 1">
+                <img src="g2.jpg" alt="Running Photo 2">
+                <img src="g4.jpg" alt="Running Photo 3">
+                <img src="g5.jpg" alt="Running Photo 4">
+                <img src="g7.jpg" alt="Running Photo 5">
+                <img src="g8.jpg" alt="Running Photo 6">
+                <img src="g10.jpg" alt="Running Photo 7">
+                <img src="g11.jpg" alt="Running Photo 8">
+                <!-- Duplicates for seamless looping -->
+                <img src="g1.jpg" alt="Running Photo 1">
+                <img src="g2.jpg" alt="Running Photo 2">
+                <img src="g4.jpg" alt="Running Photo 3">
+                <img src="g5.jpg" alt="Running Photo 4">
+                <img src="g7.jpg" alt="Running Photo 5">
+                <img src="g8.jpg" alt="Running Photo 6">
+                <img src="g10.jpg" alt="Running Photo 7">
+                <img src="g11.jpg" alt="Running Photo 8">
+            </div>
+        </div>
+
+        <!-- Section: Bride & Groom Profiles -->
+        <section id="couple" class="section-padding bg-warm">
+            <div class="container">
+                <div class="text-center mb-12">
+                    <h2 class="section-title animate-on-scroll">Mempelai</h2>
+                    <p class="section-desc animate-on-scroll">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud
+                        mengundang Anda untuk menghadiri pernikahan kami.</p>
+                </div>
+
+                <div class="couple-grid">
+                    <!-- Bride Card -->
+                    <div class="couple-card animate-on-scroll drop-down">
+                        <div class="couple-img-wrapper">
+                            <img src="bride.jpg" alt="Sulis" class="couple-img">
+                        </div>
+                        <h3 class="couple-name">Sulis</h3>
+                        <p class="parents-info">
+                            Putri pertama dari <br>
+                            <strong>Bapak Abbas</strong> <br>
+                            & <br>
+                            <strong>Ibu Nurhayati</strong>
+                        </p>
+                    </div>
+
+                    <div class="and-symbol animate-on-scroll drop-down" style="transition-delay: 0.2s;">
+                        <span>&</span>
+                    </div>
+
+                    <!-- Groom Card -->
+                    <div class="couple-card animate-on-scroll drop-down" style="transition-delay: 0.4s;">
+                        <div class="couple-img-wrapper">
+                            <img src="groom.jpg" alt="Nofriansyah" class="couple-img">
+                        </div>
+                        <h3 class="couple-name">Nofriansyah</h3>
+                        <p class="parents-info">
+                            Putra pertama dari <br>
+                            <strong>Bapak Nasrudin Se'na</strong> <br>
+                            & <br>
+                            <strong>Ibu Nurhaida Hi. Moh. Tiro</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Section: Event Details -->
+        <section id="events" class="section-padding bg-ivory">
+            <div class="container">
+                <div class="text-center mb-12 animate-on-scroll">
+                    <h2 class="section-title">Detail Acara</h2>
+                    <p class="section-desc">Insya Allah, acara pernikahan kami akan diselenggarakan pada:</p>
+                </div>
+
+                <div class="event-grid">
+                    <!-- Akad Card -->
+                    <div class="event-card animate-on-scroll slide-left">
+                        <div class="event-icon"><i class="fa-solid fa-ring"></i></div>
+                        <h3 class="event-title">Akad Nikah</h3>
+
+                        <div class="event-info-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <div>
+                                <p class="event-day">Sabtu</p>
+                                <p class="event-date">12 September 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="event-info-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <div>
+                                <p class="event-time">Pukul 10.00 WITA - Selesai</p>
+                            </div>
+                        </div>
+
+                        <div class="event-info-item">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <div>
+                                <p class="event-venue"><strong>Dusun Munawar</strong></p>
+                                <p class="event-address">Desa Lakatan Kec. Galang</p>
+                            </div>
+                        </div>
+
+                        <a href="https://maps.app.goo.gl/1c792vHpND1x1CF36?g_st=aw" target="_blank"
+                            class="btn-location">
+                            <i class="fa-solid fa-location-arrow"></i> Lihat Google Maps
+                        </a>
+                    </div>
+
+                    <!-- Perjamuan Card -->
+                    <div class="event-card animate-on-scroll slide-right">
+                        <div class="event-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+                        <h3 class="event-title">Perjamuan</h3>
+
+                        <div class="event-info-item">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <div>
+                                <p class="event-day">Sabtu</p>
+                                <p class="event-date">12 September 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="event-info-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <div>
+                                <p class="event-time">Pukul 19.30 WITA - Selesai</p>
+                            </div>
+                        </div>
+
+                        <div class="event-info-item">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <div>
+                                <p class="event-venue"><strong>Dusun Munawar</strong></p>
+                                <p class="event-address">Desa Lakatan Kec. Galang</p>
+                            </div>
+                        </div>
+
+                        <a href="https://maps.app.goo.gl/1c792vHpND1x1CF36?g_st=aw" target="_blank"
+                            class="btn-location">
+                            <i class="fa-solid fa-location-arrow"></i> Lihat Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Love Story -->
+        <section id="love-story" class="section-padding bg-ivory">
+            <div class="container">
+                <div class="text-center mb-12 animate-on-scroll">
+                    <h2 class="section-title">Love Story</h2>
+                    <p class="section-desc">Kisah perjalanan cinta kami dari awal bertemu hingga mengikat janji suci.</p>
+                </div>
+
+                <div class="love-story-container">
+                    <!-- Point 1 -->
+                    <div class="love-story-card animate-on-scroll">
+                        <div class="story-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="story-date">22 Maret 2019</div>
+                        <h3 class="story-title">Awal Bertemu</h3>
+                        <p class="story-desc">Pertama kali bertemu di sekolah. Mengawali perjalanan kisah cinta dan 7 tahun menjalani masa pacaran.</p>
+                    </div>
+
+                    <!-- Point 2 -->
+                    <div class="love-story-card animate-on-scroll">
+                        <div class="story-icon">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <div class="story-date">03 Juli 2026</div>
+                        <h3 class="story-title">Pelamaran</h3>
+                        <p class="story-desc">Momen sakral saat mengikat komitmen dan niat tulus menuju jenjang pernikahan.</p>
+                    </div>
+
+                    <!-- Point 3 -->
+                    <div class="love-story-card animate-on-scroll">
+                        <div class="story-icon">
+                            <i class="fa-solid fa-hands-holding-heart"></i>
+                        </div>
+                        <div class="story-date">12 September 2026</div>
+                        <h3 class="story-title">Menikah</h3>
+                        <p class="story-desc">Hari yang paling dinantikan untuk mengikrarkan janji suci sehidup semati.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Photo Gallery -->
+        <section id="gallery" class="section-padding bg-warm">
+            <div class="container">
+                <div class="text-center mb-12 animate-on-scroll">
+                    <h2 class="section-title">Galeri Foto</h2>
+                    <p class="section-desc">Momen-momen indah kebersamaan kami yang diabadikan dalam jepretan kamera.
+                    </p>
+                </div>
+
+                <div class="gallery-grid animate-on-scroll">
+                    <div class="gallery-item"><img src="g1.jpg" alt="Foto Sulis & Haykal 1" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="g2.jpg" alt="Foto Sulis & Haykal 2" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="g3.jpg" alt="Foto Sulis & Haykal 3" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="g4.jpg" alt="Foto Sulis & Haykal 4" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="g5.jpg" alt="Foto Sulis & Haykal 5" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="g6.jpg" alt="Foto Sulis & Haykal 6" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="g7.jpg" alt="Foto Sulis & Haykal 7" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="g8.jpg" alt="Foto Sulis & Haykal 8" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="g9.jpg" alt="Foto Sulis & Haykal 9" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="g10.jpg" alt="Foto Sulis & Haykal 10" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="g11.jpg" alt="Foto Sulis & Haykal 11" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="g12.jpg" alt="Foto Sulis & Haykal 12" class="gallery-img"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: RSVP & Wishes -->
+        <section id="rsvp-wishes" class="section-padding bg-ivory">
+            <div class="container">
+                <div class="rsvp-wishes-grid">
+
+                    <!-- RSVP Card -->
+                    <div class="rsvp-form-container animate-on-scroll slide-left">
+                        <h2 class="card-title">Konfirmasi Kehadiran</h2>
+                        <p class="card-subtitle">Silakan isi formulir di bawah ini untuk mengonfirmasi kehadiran Anda.
+                        </p>
+
+                        <form id="rsvp-form" class="rsvp-form">
+                            <div class="form-group">
+                                <label for="form-name">Nama Lengkap</label>
+                                <input type="text" id="form-name" placeholder="Masukkan nama Anda" required
+                                    autocomplete="off">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-attendance">Konfirmasi Kehadiran</label>
+                                <select id="form-attendance" required>
+                                    <option value="" disabled selected>Pilih Kehadiran</option>
+                                    <option value="Hadir">Saya Akan Hadir</option>
+                                    <option value="Ragu-ragu">Masih Ragu-ragu</option>
+                                    <option value="Tidak Hadir">Maaf, Saya Tidak Bisa Hadir</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-guests">Jumlah Tamu</label>
+                                <select id="form-guests" required>
+                                    <option value="1">1 Orang</option>
+                                    <option value="2">2 Orang (Bawa Pasangan)</option>
+                                    <option value="3">3 Orang</option>
+                                    <option value="4">4 Orang</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-wish">Ucapan & Doa Restu</label>
+                                <textarea id="form-wish" rows="4" placeholder="Tulis ucapan dan doa restu Anda..."
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-submit">Kirim Konfirmasi</button>
+                        </form>
+                    </div>
+
+                    <!-- Wishes Board -->
+                    <div class="wishes-board-container animate-on-scroll slide-right">
+                        <h2 class="card-title">Ucapan & Doa Restu</h2>
+                        <p class="card-subtitle">Doa dan restu dari sahabat dan keluarga yang berbahagia.</p>
+
+                        <div class="wishes-wrapper" id="wishes-list">
+                            <!-- Dynamically Loaded Wishes -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Gift Envelope (Kado Digital) -->
+        <section id="gift" class="section-padding bg-warm text-center">
+            <div class="container">
+                <div class="max-w-2xl mx-auto animate-on-scroll">
+                    <h2 class="section-title">Kado Digital</h2>
+                    <p class="section-desc mb-8">Bagi keluarga dan kerabat yang ingin memberikan tanda kasih untuk kami,
+                        dapat mengirimikannya secara digital melalui rekening di bawah ini:</p>
+
+                    <div class="gift-grid">
+                        <!-- Account 1 -->
+                        <div class="bank-card animate-on-scroll">
+                            <div class="bank-logo">REKENING DIGITAL</div>
+                            <p class="bank-acc-label">Nomor Rekening</p>
+                            <h4 class="bank-number" id="bri-num">1510018330859</h4>
+                            <p class="bank-holder">a.n. SULIS</p>
+                            <button class="btn-copy" onclick="copyToClipboard('bri-num')">
+                                <i class="fa-regular fa-copy"></i> Salin No. Rekening
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Gift Address -->
+                    <div class="gift-address-card mt-8 animate-on-scroll">
+                        <i class="fa-solid fa-gift address-icon"></i>
+                        <h4>Kirim Kado Fisik</h4>
+                        <p class="address-text">
+                            Dusun Munawar Desa Lakatan Kec. Galang
+                        </p>
+                        <button class="btn-copy" id="btn-copy-address"
+                            onclick="copyText('Dusun Munawar Desa Lakatan Kec. Galang')">
+                            <i class="fa-regular fa-copy"></i> Salin Alamat
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Closing / Footer -->
+        <footer class="footer bg-overlay-fixed" style="background-image: url('couple_bg.jpg');">
+            <div class="cover-overlay"></div>
+            <div class="container relative z-10 text-center text-white">
+                <p class="footer-thanks">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+                    Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.</p>
+
+                <h3 class="footer-names">SULIS & HAYKAL</h3>
+                <p class="footer-closing">Sampai Jumpa di Hari Bahagia Kami</p>
+
+                <div class="footer-divider"></div>
+                <p class="credit-text">Undangan Digital oleh WARDIGITAL &bull; <a
+                        href="https://instagram.com/war.digital_" target="_blank"
+                        style="color: var(--secondary-light); text-decoration: none; font-weight: 500;"><i
+                            class="fa-brands fa-instagram"></i> @war.digital_</a></p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Lightbox Popup Overlay (for Gallery) -->
+    <div id="lightbox-overlay" class="lightbox-overlay">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <!-- Hidden Audio element -->
+    <audio id="wedding-audio" loop preload="auto">
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Script File -->
+    <script src="script.js?v=16"></script>
+</body>
+
+</html>
