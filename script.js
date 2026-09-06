@@ -363,13 +363,13 @@ const defaultWishes = [
     {
         name: 'Rudi & Susi (Keluarga)',
         attendance: 'Hadir',
-        wish: 'Barakallahu lakuma wa baraka alaikuma wa jamaa bainakuma fii khair. Selamat menempuh hidup baru Sulis & Haykal! Semoga selalu dilimpahi sakinah, mawaddah, dan warahmah.',
+        wish: 'Barakallahu lakuma wa baraka alaikuma wa jamaa bainakuma fii khair. Selamat menempuh hidup baru Sulis & Haekal! Semoga selalu dilimpahi sakinah, mawaddah, dan warahmah.',
         timestamp: Date.now() - 3600000 * 2 // 2 hours ago
     },
     {
         name: 'Budi Santoso',
         attendance: 'Hadir',
-        wish: 'Selamat ya Haykal! Lancar-lancar sampai hari H. Bahagia selalu selamanya bersama Sulis.',
+        wish: 'Selamat ya Haekal! Lancar-lancar sampai hari H. Bahagia selalu selamanya bersama Sulis.',
         timestamp: Date.now() - 3600000 * 5 // 5 hours ago
     },
     {
